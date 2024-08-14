@@ -1,0 +1,12 @@
+function doubleArray(arr,callback){
+    const doubleArr = arr.map((num) =>{
+        return callback(num);
+    });
+    return doubleArr;
+}
+const originalArr =[1,23,43,4];
+function callback(num){
+    return num*2;
+}
+const doubleArr2 = doubleArray(originalArr,callback);
+console.log(doubleArr2)
